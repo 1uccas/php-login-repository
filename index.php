@@ -26,13 +26,13 @@
 							<label>Usuário</label>
 						</div>
 						<div class="div-label-input-user">
-							<input type="text" placeholder="Informe seu usuário" name="input-user">
+							<input type="text" placeholder="Informe seu usuário" name="input-user" required>
 						</div>
 						<div class="div-label-password">
 							<label>Senha</label>
 						</div>
 						<div class="div-label-input-password">
-							<input type="password" placeholder="Informe sua senha" name="input-password">
+							<input type="password" placeholder="Informe sua senha" name="input-password" required>
 						</div>
 						<div class="div-input-button">
 							<button type="submit">Acessar</button>
