@@ -6,15 +6,26 @@ body{
 	align-items: center;
 	justify-self: center;
 }
+.error{
+	text-align: center;
+	font-weight: bold;
+	color: red;
+}
 
 .box-login{
 	margin-top: 50%;
 	border-radius: 5%;
-	background-color: gray;
+	background: linear-gradient(to right, #3a1357, #003366);
 	padding: 50px;
 }
 
 .div-label-user, .div-label-password, .div-input-button{
 	text-align: center;
 	color: white;
+}
+.div-input-button{
+	margin-top: 20px;
+}
+.div-forgout-password{
+	text-align: right;
 }
