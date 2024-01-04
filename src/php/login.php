@@ -16,15 +16,6 @@ if ($result->num_rows > 0) {
 			die("Erro inesperado aconteceu".error);
 		} else {
 			header("location: ../../index.php?error=1");
-			echo "Usuario ou senha incorreto";
-			/*echo "<br>O usuário digital foi: ".$user;
-			echo "<br>A senha digitada foi: ".$senha;
-
-			echo "<br>";
-
-			echo "<br>ID -> ". $row['id']. "<br>";
-			echo "<br>USER -> ". $row['nome_usuario']. "<br>";
-			echo "<br>PASSWORD -> ". $row['senha']. "<br>";*/
 		}
 
 		
