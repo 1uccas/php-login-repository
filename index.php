@@ -1,11 +1,14 @@
 <?php 
+function error_login(){
 	if (isset($_GET['error'])) {
 		$error_1 = $_GET['error'];
 
 		if ($error_1 == 1) {
-			echo "Usuario ou Senha Incorreto";
+			echo "<div class='error'>Usuário ou Senha Incorretos!</div>";
 		}
 	}
+}
+	
 	
 ?>
 <!DOCTYPE html>
@@ -28,17 +31,21 @@
 						</div>
 						<div class="input-group flex-nowrap m-2">
 						  <span class="input-group-text" id="addon-wrapping"></span>
-						  <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="addon-wrapping">
+						  <input type="text" class="form-control" name="input-user" placeholder="Username" aria-label="Username" aria-describedby="addon-wrapping">
 						</div>
 						<div class="div-label-password">
 							<label>Senha</label>
 						</div>
 						<div class="input-group flex-nowrap m-2">
 						  <span class="input-group-text" id="addon-wrapping"></span>
-						  <input type="password" class="form-control" placeholder="Password" aria-label="Username" aria-describedby="addon-wrapping">
+						  <input type="password" class="form-control" name="input-password" placeholder="Password" aria-label="Username" aria-describedby="addon-wrapping">
+						</div>
+						<?php error_login() ?>
+						<div class="div-forgout-password">
+							<p><a href="#" class="pe-auto">Esqueci a senha</a></p>
 						</div>
 						<div class="div-input-button">
-							<button type="submit">Acessar</button>
+							<button type="submit" class="btn btn-warning">Acessar</button>
 						</div>
 					</form>
 					
