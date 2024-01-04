@@ -1,3 +1,13 @@
+<?php 
+	if (isset($_GET['error'])) {
+		$error_1 = $_GET['error'];
+
+		if ($error_1 == 1) {
+			echo "Usuario ou Senha Incorreto";
+		}
+	}
+	
+?>
 <!DOCTYPE html>
 <html>
 <head>
