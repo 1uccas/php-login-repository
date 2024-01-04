@@ -17,7 +17,7 @@
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 	<title>Atomic - Login</title>
 </head>
-<body>
+<body class="bg-dark">
 	<main class="main-class-master">
 		<div class="box-class-container">
 			<div class="box-class">
@@ -26,14 +26,16 @@
 						<div class="div-label-user">
 							<label>Usuário</label>
 						</div>
-						<div class="div-label-input-user">
-							<input type="text" placeholder="Informe seu usuário" name="input-user" required>
+						<div class="input-group flex-nowrap m-2">
+						  <span class="input-group-text" id="addon-wrapping"></span>
+						  <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="addon-wrapping">
 						</div>
 						<div class="div-label-password">
 							<label>Senha</label>
 						</div>
-						<div class="div-label-input-password">
-							<input type="password" placeholder="Informe sua senha" name="input-password" required>
+						<div class="input-group flex-nowrap m-2">
+						  <span class="input-group-text" id="addon-wrapping"></span>
+						  <input type="password" class="form-control" placeholder="Password" aria-label="Username" aria-describedby="addon-wrapping">
 						</div>
 						<div class="div-input-button">
 							<button type="submit">Acessar</button>
