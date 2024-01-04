@@ -1,4 +1,6 @@
 <?php 
+include '../conf/MySQL.php';
+
 echo "Redirecionamento Concluido com sucesso :)";
 
 $user = $_POST['input-user'];
