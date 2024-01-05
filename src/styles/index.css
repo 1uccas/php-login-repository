@@ -6,14 +6,25 @@ body{
 	align-items: center;
 	justify-self: center;
 }
+
 .error{
 	text-align: center;
 	font-weight: bold;
 	color: red;
 }
+.div-novo-usuario hr, p{
+	color: white;
+
+}
+.div-novo-usuario hr{
+	margin-top: 25px;
+}
+.div-novo-usuario p{
+	margin-top: 35px;
+}
 
 .box-login{
-	margin-top: 50%;
+	margin-top: 25%;
 	border-radius: 5%;
 	background: linear-gradient(to right, #3a1357, #003366);
 	padding: 50px;
@@ -28,4 +39,7 @@ body{
 }
 .div-forgout-password{
 	text-align: right;
+}
+.div-forgout-password a:hover, .div-novo-usuario a:hover{
+	color: white;
 }
