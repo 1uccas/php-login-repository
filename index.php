@@ -50,7 +50,7 @@ function error_login(){ //Função para retornar div abaixo caso a URL contenha 
 					</form>
 					<div class="div-novo-usuario">
 						<hr>
-						<p>Não tem uma conta? - <a href="#">Cadastrar novo usuário</a></p>
+						<p>Não tem uma conta? - <a href="src/page/cadastrar_novo_usuario.php">Cadastrar novo usuário</a></p>
 					</div>
 					
 				</div>
