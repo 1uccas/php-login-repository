@@ -30,9 +30,13 @@ body{
 	padding: 50px;
 }
 
-.div-label-user, .div-label-password, .div-input-button{
-	text-align: center;
+.div-label-user, .div-label-password{
+	margin-left: 10px;
+	text-align: left;
 	color: white;
+}
+.div-input-button{
+	text-align: center;
 }
 .div-input-button{
 	margin-top: 20px;
