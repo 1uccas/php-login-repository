@@ -48,6 +48,10 @@ function error_login(){ //Função para retornar div abaixo caso a URL contenha 
 							<button type="submit" class="btn btn-warning">Acessar</button>
 						</div>
 					</form>
+					<div class="div-novo-usuario">
+						<hr>
+						<p>Não tem uma conta? - <a href="#">Cadastrar novo usuário</a></p>
+					</div>
 					
 				</div>
 			</div>
