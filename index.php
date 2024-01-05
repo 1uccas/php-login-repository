@@ -31,14 +31,14 @@ function error_login(){
 						</div>
 						<div class="input-group flex-nowrap m-2">
 						  <span class="input-group-text" id="addon-wrapping"></span>
-						  <input type="text" class="form-control" name="input-user" placeholder="Username" aria-label="Username" aria-describedby="addon-wrapping">
+						  <input type="text" class="form-control" name="input-user" placeholder="Username" aria-label="Username" aria-describedby="addon-wrapping" required>
 						</div>
 						<div class="div-label-password">
 							<label>Senha</label>
 						</div>
 						<div class="input-group flex-nowrap m-2">
 						  <span class="input-group-text" id="addon-wrapping"></span>
-						  <input type="password" class="form-control" name="input-password" placeholder="Password" aria-label="Username" aria-describedby="addon-wrapping">
+						  <input type="password" class="form-control" name="input-password" placeholder="Password" aria-label="Username" aria-describedby="addon-wrapping" required>
 						</div>
 						<?php error_login() ?>
 						<div class="div-forgout-password">
