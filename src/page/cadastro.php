@@ -16,7 +16,7 @@
 		<div class="box-class-container">
 			<div class="box-class">
 				<div class="box-cadastro">
-					<form action="" method="POST">
+					<form action="../php/InserirUsuario.php" method="POST">
 						<div class="div-label-user">
 							<label>Usuário</label>
 						</div>
