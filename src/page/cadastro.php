@@ -15,24 +15,31 @@
 	<main class="main-class-master">
 		<div class="box-class-container">
 			<div class="box-class">
-				<div class="box-login">
+				<div class="box-cadastro">
 					<form action="" method="POST">
 						<div class="div-label-user">
 							<label>Usuário</label>
 						</div>
 						<div class="input-group flex-nowrap m-2">
 						  <span class="input-group-text" id="addon-wrapping"></span>
-						  <input type="text" class="form-control" name="" placeholder="" aria-label="Username" aria-describedby="addon-wrapping" required>
+						  <input type="text" class="form-control" id="username_cadastro" name="username_cadastro" placeholder="Username" aria-label="Username" aria-describedby="addon-wrapping" required>
 						</div>
 						<div class="div-label-password">
 							<label>Senha</label>
 						</div>
 						<div class="input-group flex-nowrap m-2">
 						  <span class="input-group-text" id="addon-wrapping"></span>
-						  <input type="password" class="form-control" name="" placeholder="" aria-label="Username" aria-describedby="addon-wrapping" required>
+						  <input type="password" class="form-control" id="password_cadastro" name="password_cadastro" placeholder="Password" aria-label="Username" aria-describedby="addon-wrapping" required>
+						</div>
+						<div class="div-label-again-password">
+							<label>Confirme sua Senha</label>
+						</div>
+						<div class="input-group flex-nowrap m-2">
+						  <span class="input-group-text" id="addon-wrapping"></span>
+						  <input type="password" class="form-control" id="password_again_cadastro" name="password_again_cadastro" placeholder="Confirm your password" aria-label="Username" aria-describedby="addon-wrapping" required>
 						</div>
 						<div class="div-input-button">
-							<button type="submit" class="btn btn-warning">Acessar</button>
+							<button type="submit" class="btn btn-warning" name="btn_cadastro">Criar cadastro</button>
 						</div>
 					</form>
 				</div>
