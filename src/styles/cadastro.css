@@ -7,29 +7,20 @@ body{
 	justify-self: center;
 }
 
-
-.div-novo-usuario hr, p{
-	color: white;
-
-}
-.div-novo-usuario hr{
-	margin-top: 25px;
-}
-.div-novo-usuario p{
-	margin-top: 35px;
-}
-
-.box-login{
+.box-cadastro{
 	margin-top: 25%;
 	border-radius: 5%;
 	background: linear-gradient(to right, #3a1357, #003366);
-	padding: 50px;
+	padding: 80px;
 }
 
-.div-label-user, .div-label-password{
+.div-label-user, .div-label-password, .div-label-again-password{
 	margin-left: 10px;
 	text-align: left;
 	color: white;
+}
+.div-label-again-password{
+	margin-top: 15px;
 }
 .div-input-button{
 	text-align: center;
