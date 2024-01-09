@@ -1,0 +1,39 @@
+body{
+	background-color: black;
+	color: white;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-self: center;
+}
+
+
+.div-novo-usuario hr, p{
+	color: white;
+
+}
+.div-novo-usuario hr{
+	margin-top: 25px;
+}
+.div-novo-usuario p{
+	margin-top: 35px;
+}
+
+.box-login{
+	margin-top: 25%;
+	border-radius: 5%;
+	background: linear-gradient(to right, #3a1357, #003366);
+	padding: 50px;
+}
+
+.div-label-user, .div-label-password{
+	margin-left: 10px;
+	text-align: left;
+	color: white;
+}
+.div-input-button{
+	text-align: center;
+}
+.div-input-button{
+	margin-top: 20px;
+}
