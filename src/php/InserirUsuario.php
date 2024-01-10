@@ -1,8 +1,8 @@
 <?php
 include '../conf/MySQL.php';
 
-//FAZER UMA VERIFICAÇÃO COM O BANCO DE DADOS PARA SABER SE O LOGIN E A SENHA DIGITADO JÁ EXISTE!
-//ENVIAR UM CODIGO DE ERRO PELA URL PARA ENVIO DE ECHO A PÁGINA DE CADASTRO, INFORMADO DO OCORRIDO!
+//FAZER UMA VERIFICAÇÃO COM O BANCO DE DADOS PARA SABER SE O LOGIN E A SENHA DIGITADO JÁ EXISTE! (OK)
+//ENVIAR UM CODIGO DE ERRO PELA URL PARA ENVIO DE ECHO A PÁGINA DE CADASTRO, INFORMADO DO OCORRIDO! (OK)
 //CRIPTOGRAFAR URL INSERIRUSUARIO.PHP
 //FAZER ALGO PARA QUE SIMPLESMENTE NÃO POSSA DIGITAR A URL INSERIRUSUARIO.PHP E CADASTRAR USER SEM PASSAR PELO FORMULÁRIO (OK)
 
@@ -24,7 +24,8 @@ if ($result_sql_user->num_rows > 0) {
       if ($row['nome_usuario'] != $user) {
          insertUser($link, $user, $password);
       }else{
-         die("Usuario já cadastrado");
+         header("location: ../../index.php?error=2");
+         die();
       }
     }
 } else { 
@@ -33,25 +34,16 @@ if ($result_sql_user->num_rows > 0) {
 }
 
 function insertUser($link, $user, $password){
-
    $id = uniqid();
    $pass = password_hash($password, PASSWORD_DEFAULT);
-
-   var_dump($user, $password, $pass, $id);
 
    $sql = "INSERT INTO usuarios (id, nome_usuario, senha) VALUES ('$id', '$user', '$pass')";
 
    if (mysqli_query($link, $sql)) {
-      //echo "<br>DADOS ENVIADOS COM SUCESSO<br><br>";
-      // var_dump($id, $user, $pass);
-
        header("location: ../../index.php");
    } else {
        echo "Erro: " . $sql . "<br>" . mysqli_errno($link);
    }
-
    mysqli_close($link);
 }
-
-
 ?>
