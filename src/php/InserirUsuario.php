@@ -15,7 +15,7 @@ $sql = "INSERT INTO usuarios (id, nome_usuario, senha) VALUES ('$id', '$user', '
 
 if (mysqli_query($link, $sql)) {
    //echo "<br>DADOS ENVIADOS COM SUCESSO<br><br>";
-    //var_dump($id, $user, $pass);
+   // var_dump($id, $user, $pass);
 
     header("location: ../../index.php");
 } else {
