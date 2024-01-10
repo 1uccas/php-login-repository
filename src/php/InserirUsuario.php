@@ -19,10 +19,10 @@ $user_sql = "SELECT * FROM usuarios";
 $result_sql_user = $link->query($user_sql);
 
 // Caso o número de colunas da variável for MAIOR que ZERO 
-if ($result_sql->num_rows > 0) {
+if ($result_sql_user->num_rows > 0) {
     while ($row = $result_sql_user->fetch_assoc()) {
       if ($row['nome_usuario'] != $user) {
-         print_r($row);
+         insertUser($link, $user, $password);
       }else{
          die("Usuario já cadastrado");
       }
@@ -32,24 +32,26 @@ if ($result_sql->num_rows > 0) {
     echo "<br>Sem resultados :(<br>";
 }
 
-/*
-$id = uniqid();
-$user = mysqli_real_escape_string($link, $_POST['username_cadastro']); // Sanitizar entrada do usuário
-$password = mysqli_real_escape_string($link, $_POST['password_cadastro']); // Sanitizar entrada do usuário
+function insertUser($link, $user, $password){
 
-$pass = password_hash($password, PASSWORD_DEFAULT);
+   $id = uniqid();
+   $pass = password_hash($password, PASSWORD_DEFAULT);
 
-$sql = "INSERT INTO usuarios (id, nome_usuario, senha) VALUES ('$id', '$user', '$pass')";
+   var_dump($user, $password, $pass, $id);
 
-if (mysqli_query($link, $sql)) {
-   //echo "<br>DADOS ENVIADOS COM SUCESSO<br><br>";
-   // var_dump($id, $user, $pass);
+   $sql = "INSERT INTO usuarios (id, nome_usuario, senha) VALUES ('$id', '$user', '$pass')";
 
-    header("location: ../../index.php");
-} else {
-    echo "Erro: " . $sql . "<br>" . mysqli_errno($link);
+   if (mysqli_query($link, $sql)) {
+      //echo "<br>DADOS ENVIADOS COM SUCESSO<br><br>";
+      // var_dump($id, $user, $pass);
+
+       header("location: ../../index.php");
+   } else {
+       echo "Erro: " . $sql . "<br>" . mysqli_errno($link);
+   }
+
+   mysqli_close($link);
 }
 
-mysqli_close($link);
-*/
+
 ?>
