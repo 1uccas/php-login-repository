@@ -5,6 +5,8 @@ function error_login(){ //Função para retornar div abaixo caso a URL contenha 
 
 		if ($error_1 == 1) {
 			echo "<div class='error'>Usuário ou Senha Incorretos!</div>";
+		}elseif ($error_1 == 2) {
+			echo "<div class='error'>Usuário já cadastrado</div>";
 		}
 	}
 }
