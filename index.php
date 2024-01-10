@@ -3,10 +3,13 @@ function error_login(){ //Função para retornar div abaixo caso a URL contenha 
 	if (isset($_GET['error'])) {
 		$error_1 = $_GET['error'];
 
-		if ($error_1 == 1) {
-			echo "<div class='error'>Usuário ou Senha Incorretos!</div>";
-		}elseif ($error_1 == 2) {
-			echo "<div class='error'>Usuário já cadastrado</div>";
+		$errors = [
+			1 => "<div class='error'>Usuário ou Senha Incorretos!</div>",
+			2 => "<div class='error'>Usuário já cadastrado</div>",
+		];
+
+		if (isset($errors[$error_1])) {
+			echo $errors[$error_1];
 		}
 	}
 }
