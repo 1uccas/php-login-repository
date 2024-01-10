@@ -1,28 +1,27 @@
-<?php 
-include '../conf/MySQL.php'; //Incluindo conexão com Bando de Dados MYSQL (MySQL.php)
+<?php
+include '../conf/MySQL.php';
 
-//Variaveis do formulário - index.php
-$user = $_POST['input-user'];
-$senha = $_POST['input-password'];
+// Variáveis do formulário - index.php
+$user = mysqli_real_escape_string($link, $_POST['input-user']);
+$senha = mysqli_real_escape_string($link, $_POST['input-password']);
 
-$sql = "SELECT * FROM usuarios"; //Variavel comando MySQL
-$result = $link->query($sql); //Variavel para atribuir o comando MySQL para o link de conexão (MySQL.php)
+$sql = "SELECT * FROM usuarios";
+$result = $link->query($sql);
 
-//Caso o numeros de colunas da variavel for MAIOR que ZERO 
+// Caso o número de colunas da variável for MAIOR que ZERO 
 if ($result->num_rows > 0) {
-	while($row = $result->fetch_assoc()){ 
-		if ($user == $row['nome_usuario'] && $senha == $row['senha']) {
-			header("location: ../../index.php");
-			die("Erro inesperado aconteceu".error);
-		} else {
-			header("location: ../../index.php?error=1");
-		}
-
-		
-	}
-}else{ //Caso o numeros de colunas da variavel for MENOR que ZERO 
-	echo "<br>Sem resultados :(<br>";
+    while ($row = $result->fetch_assoc()) {
+        if ($user == $row['nome_usuario'] && password_verify($senha, $row['senha'])) {
+            header("location: ../../index.php");
+            die("Redirecionamento concluído com sucesso");
+        } else {
+            header("location: ../../index.php?error=1");
+        }
+    }
+} else { 
+    // Caso o número de colunas da variável for MENOR que ZERO 
+    echo "<br>Sem resultados :(<br>";
 }
 
-echo "<br>Redirecionamento Concluido com sucesso :)";
+echo "<br>Redirecionamento concluído com sucesso :)";
 ?>
