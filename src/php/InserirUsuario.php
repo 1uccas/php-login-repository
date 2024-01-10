@@ -12,7 +12,6 @@ if (!isset($_POST['username_cadastro']) || !isset($_POST['password_cadastro'])) 
 }else{
    $user = mysqli_real_escape_string($link, $_POST['username_cadastro']); // Sanitizar entrada do usuário
    $password = mysqli_real_escape_string($link, $_POST['password_cadastro']); // Sanitizar entrada do usuário
-<<<<<<< HEAD
 }
 
 //chamada de usuarios do banco de dados
@@ -49,7 +48,6 @@ if (mysqli_query($link, $sql)) {
 
 mysqli_close($link);
 */
-=======
 }
 
 //chamada de usuarios do banco de dados
@@ -84,5 +82,4 @@ function insertUser($link, $user, $password){
    }
    mysqli_close($link);
 }
->>>>>>> testing
 ?>
