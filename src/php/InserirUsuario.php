@@ -16,12 +16,16 @@ if (!isset($_POST['username_cadastro']) || !isset($_POST['password_cadastro'])) 
 
 //chamada de usuarios do banco de dados
 $user_sql = "SELECT * FROM usuarios";
-$result_sql = $link->query($user_sql);
+$result_sql_user = $link->query($user_sql);
 
 // Caso o número de colunas da variável for MAIOR que ZERO 
 if ($result_sql->num_rows > 0) {
-    while ($row = $result_sql->fetch_assoc()) {
-        print_r($row);
+    while ($row = $result_sql_user->fetch_assoc()) {
+      if ($row['nome_usuario'] != $user) {
+         print_r($row);
+      }else{
+         die("Usuario já cadastrado");
+      }
     }
 } else { 
     // Caso o número de colunas da variável for MENOR que ZERO 
