@@ -1,11 +1,6 @@
 <?php
 include '../conf/MySQL.php';
 
-//FAZER UMA VERIFICAÇÃO COM O BANCO DE DADOS PARA SABER SE O LOGIN E A SENHA DIGITADO JÁ EXISTE! (OK)
-//ENVIAR UM CODIGO DE ERRO PELA URL PARA ENVIO DE ECHO A PÁGINA DE CADASTRO, INFORMADO DO OCORRIDO! (OK)
-//CRIPTOGRAFAR URL INSERIRUSUARIO.PHP
-//FAZER ALGO PARA QUE SIMPLESMENTE NÃO POSSA DIGITAR A URL INSERIRUSUARIO.PHP E CADASTRAR USER SEM PASSAR PELO FORMULÁRIO (OK)
-
 //Valida se o formulário contem alguma informação
 if (!isset($_POST['username_cadastro']) || !isset($_POST['password_cadastro'])) {
    die("Usuario ou senha não encontrado ou digitos < 1");
