@@ -12,7 +12,7 @@ $result = $link->query($sql);
 if ($result->num_rows > 0) {
     while ($row = $result->fetch_assoc()) {
         if ($user == $row['nome_usuario'] && password_verify($senha, $row['senha'])) {
-            header("location: ../page/inicio.php");
+            header("location: Sessions.php?user=".$user);
             die("Redirecionamento concluído com sucesso");
         } else {
             header("location: ../../index.php?error=1");
