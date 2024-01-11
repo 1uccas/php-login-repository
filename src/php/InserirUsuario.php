@@ -28,7 +28,7 @@ function insertUser($link, $user, $password){
    $sql = "INSERT INTO usuarios (id, nome_usuario, senha) VALUES ('$id', '$user', '$pass')";
 
    if (mysqli_query($link, $sql)) {
-       header("location: ../../index.php");
+       header("location: ../../index.php?u=0");
    } else {
        echo "Erro: " . $sql . "<br>" . mysqli_errno($link);
    }
