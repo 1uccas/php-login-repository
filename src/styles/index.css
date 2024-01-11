@@ -12,6 +12,24 @@ body{
 	font-weight: bold;
 	color: red;
 }
+.user_concluide{
+	color:  white;
+	text-align: center;
+    opacity: 1; 
+    animation: aparecerDesaparecer 3s ease-in-out forwards; 
+}
+
+@keyframes aparecerDesaparecer {
+    0% {
+        opacity: 1; /* Início da animação com opacidade 1 */
+    }
+    90% {
+        opacity: 1; /* Mantém a opacidade em 1 até 90% da animação */
+    }
+    100% {
+        opacity: 0; /* Reduz a opacidade novamente para 0 (invisível) no final da animação */
+    }
+}
 .div-novo-usuario hr, p{
 	color: white;
 
