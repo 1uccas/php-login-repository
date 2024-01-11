@@ -1,20 +1,6 @@
-<?php 
-function error_login(){ //Função para retornar div abaixo caso a URL contenha ?error=1
-	if (isset($_GET['error'])) {
-		$error_1 = $_GET['error'];
+<?php
+include 'src/Utils/Manipulador.php'; 
 
-		$errors = [
-			1 => "<div class='error'>Usuário ou Senha Incorretos!</div>",
-			2 => "<div class='error'>Usuário já cadastrado</div>",
-		];
-
-		if (isset($errors[$error_1])) {
-			echo $errors[$error_1];
-		}
-	}
-}
-	
-	
 ?>
 <!DOCTYPE html>
 <html>
@@ -30,6 +16,7 @@ function error_login(){ //Função para retornar div abaixo caso a URL contenha 
 		<div class="box-class-container">
 			<div class="box-class">
 				<div class="box-login">
+					<?php u(); ?> <!--Chamada da função de novo usuario cadastrado -->
 					<form action="src/php/login.php" method="POST">
 						<div class="div-label-user">
 							<label>Usuário</label>
@@ -45,7 +32,7 @@ function error_login(){ //Função para retornar div abaixo caso a URL contenha 
 						  <span class="input-group-text" id="addon-wrapping"></span>
 						  <input type="password" class="form-control" name="input-password" placeholder="Password" aria-label="Username" aria-describedby="addon-wrapping" required>
 						</div>
-						<?php error_login() ?> <!--Chamada da função PHP -->
+						<?php errors() ?> <!--Chamada da função de error PHP -->
 						<div class="div-forgout-password">
 							<p><a href="#" class="pe-auto">Esqueci a senha</a></p>
 						</div>
