@@ -1,17 +1,15 @@
 <?php 
 echo "Hello";
-function startSession(){
-	$user = $_GET['user'];
-
+function startSession($user){
 	//Verifica se existe alguma sessão ativa
 	if (session_start() !== PHP_SESSION_ACTIVE) {
 		//Se tiver ativa mas não tiver nenhuma sessão habilitada, inicia uma nova
 		if (!isset($_SESSION)) {
 			session_start();	
 		}else{
-			$id_session = session_id();
-			$status_session = session_status();
+			$id_session = $_SESSION['id'] = session_id();
 			$name_session = $_SESSION['nome'] = $user;
+			$status_session = session_status();
 
 			echo "<br>Id da sessão ->".$id_session." <br>";
 			echo "<br>nome de usuario -> ".$name_session.'<br>';
@@ -23,7 +21,5 @@ function startSession(){
 		
 	
 }
-
-startSession();
 
 ?>
