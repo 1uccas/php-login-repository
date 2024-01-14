@@ -7,7 +7,15 @@ class Router extends RouteSwitch{
     public function run(string $requestUri){
         $route = substr($requestUri, 1);
 
-        if ($route === '' || $route === '?error=1' || $route ==='?error=2' || $route ==='?error=3' || $route ==='?u=0') {
+        $routes_login = [
+            '',
+            '?error=1',
+            '?error=2',
+            '?error=3',
+            '?u=0',
+        ];
+
+        if (in_array($route, $routes_login)) {
             $this->home();
         } else {
             $this->$route();
