@@ -3,7 +3,7 @@
 abstract class RouteSwitch{
     
     protected function home(){
-        require __DIR__ . '/../page/LoginAtomic.php';
+        require __DIR__ . '/../page/login.php';
     }
     protected function inicio(){
         require __DIR__. '/../page/inicio.php';
@@ -16,7 +16,7 @@ abstract class RouteSwitch{
         require __DIR__ . '/../php/InserirUsuario.php';
     }
     protected function phpLogin(){
-        require __DIR__ . '/../php/login.php';
+        require __DIR__ . '/../php/autenticacao.php';
     }
     
     public function __call($name, $arguments){
