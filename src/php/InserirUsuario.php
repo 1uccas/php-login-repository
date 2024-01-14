@@ -1,5 +1,5 @@
 <?php
-include '../conf/MySQL.php';
+include 'src/conf/MySQL.php';
 
 //Valida se o formulário contem alguma informação
 if (!isset($_POST['username_cadastro']) || !isset($_POST['password_cadastro'])) {
@@ -15,7 +15,7 @@ $result_sql_user = $link->query($user_sql);
 
 // Caso o número de colunas da variável for MAIOR que ZERO 
 if ($result_sql_user->num_rows > 0) {
-    header("location: ../../index.php?error=2");
+    header("location: /?error=2");
     die();
 } else { 
    insertUser($link, $user, $password);
@@ -28,7 +28,7 @@ function insertUser($link, $user, $password){
    $sql = "INSERT INTO usuarios (id, nome_usuario, senha) VALUES ('$id', '$user', '$pass')";
 
    if (mysqli_query($link, $sql)) {
-       header("location: ../../index.php?u=0");
+       header("location: /?u=0");
    } else {
        echo "Erro: " . $sql . "<br>" . mysqli_errno($link);
    }

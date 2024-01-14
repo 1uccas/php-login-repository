@@ -1,5 +1,5 @@
 <?php
-include_once '../conf/MySQL.php';
+include_once 'src/conf/MySQL.php';
 include 'Sessions.php';
 
 // Variáveis do formulário - index.php
@@ -14,10 +14,10 @@ if ($result->num_rows > 0) {
     while ($row = $result->fetch_assoc()) {
         if ($user == $row['nome_usuario'] && password_verify($senha, $row['senha'])) {
             startSession($user);
-            header("location: ../page/inicio.php");
+            header("location: /inicio");
             die("Redirecionamento concluído com sucesso");
         } else {
-            header("location: ../../index.php?error=1");
+            header("location: /?error=1");
         }
     }
 } else { 
