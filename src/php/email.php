@@ -33,10 +33,10 @@ if ($status != 404) {
 }
 
 //função de envio de mensagens
-function enviarMensagem($id_uniq) {
+function enviarMensagem($id_uniq, $user, $email) {
     $corpoEmail = "
         <p>Código de acesso pessoal</p>
-        <p>Recebemos sua solicitação de acesso único por 24 horas.<br>Seu código de acesso é: $id_uniq</p>
+        <p>Olá $user, <br>Recebemos sua solicitação de acesso único por 24 horas.<br>Seu código de acesso é: $id_uniq.<br><strong>É importante lembrar de não compartilhar com ninguém.</strong></p>
     ";
 
     $mail = new PHPMailer(true);
@@ -53,7 +53,7 @@ function enviarMensagem($id_uniq) {
 
         // Configurações do e-mail
         $mail->setFrom('me.mailphp@gmail.com', 'me.mailphp');
-        $mail->addAddress('nascimentolucas2164@gmail.com', 'Destinatário');
+        $mail->addAddress($email, 'Destinatário');
         $mail->isHTML(true);
         $mail->Subject = "Acesso Pessoal";
         $mail->Body = $corpoEmail;
