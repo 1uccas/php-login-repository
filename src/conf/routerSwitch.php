@@ -8,7 +8,8 @@ abstract class RouteSwitch{
     protected function inicio(){
         require __DIR__. '/../page/inicio.php';
     }
-    protected function esqueci_senha(){
+    
+    protected function enviar_email(){
         require __DIR__. '/../php/email.php';
     }
 
