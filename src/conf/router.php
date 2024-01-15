@@ -13,6 +13,8 @@ class Router extends RouteSwitch{
             '?error=2',
             '?error=3',
             '?u=0',
+            '?u=1',
+            '?u=2',
         ];
 
         if (in_array($route, $routes_login)) {
