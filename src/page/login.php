@@ -34,7 +34,7 @@ include 'src/Utils/Manipulador.php';
 						</div>
 						<?php errors() ?> <!--Chamada da função de error PHP -->
 						<div class="div-forgout-password">
-							<p><a href="#" class="pe-auto">Esqueci a senha</a></p>
+							<p><a href="esqueci_senha" class="pe-auto">Esqueci a senha</a></p>
 						</div>
 						<div class="div-input-button">
 							<button type="submit" class="btn btn-warning">Acessar</button>
