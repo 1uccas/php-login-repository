@@ -23,7 +23,7 @@ if ($status != 404) {
     }
 
     if ($result->num_rows > 0) {
-        enviarMensagem($id_uniq);
+        enviarMensagem($id_uniq, $user, $email);
         header("location: /?u=2"); //usuario encontrado com sucesso
     } else {
        header("location: /?u=1"); //usuario não encontrado no banco de dados
@@ -35,8 +35,13 @@ if ($status != 404) {
 //função de envio de mensagens
 function enviarMensagem($id_uniq, $user, $email) {
     $corpoEmail = "
-        <p>Código de acesso pessoal</p>
-        <p>Olá $user, <br>Recebemos sua solicitação de acesso único por 24 horas.<br>Seu código de acesso é: $id_uniq.<br><strong>É importante lembrar de não compartilhar com ninguém.</strong></p>
+        <center><h1>Código de acesso pessoal</h1></center>
+
+        <h3>Olá, <strong>$user.</strong></h3> <p>Recebemos sua solicitação de acesso único por 24 horas.<br>Seu código de acesso é: <strong>$id_uniq</strong></p>
+
+        <p>Se você não solicitou esse código. Entre em contato com o proprietário através do E-mail: <strong>the.new.captionn@gmail.com</strong></p>
+
+        <i><strong>É importante lembrar de não compartilhar com ninguém.</strong></i>
     ";
 
     $mail = new PHPMailer(true);
@@ -52,7 +57,7 @@ function enviarMensagem($id_uniq, $user, $email) {
         $mail->Port = 587;
 
         // Configurações do e-mail
-        $mail->setFrom('me.mailphp@gmail.com', 'me.mailphp');
+        $mail->setFrom('me.mailphp@gmail.com', 'Atomic');
         $mail->addAddress($email, 'Destinatário');
         $mail->isHTML(true);
         $mail->Subject = "Acesso Pessoal";
