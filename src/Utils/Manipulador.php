@@ -3,10 +3,15 @@
 function u(){
 	if(isset($_GET['u'])){
 		$u = $_GET['u'];
-		if ($u == 0) {
-			echo "<div class='user_concluide'>Usuário adicionado com sucesso!</div>";
-		}else{
-			echo "error()";
+
+		$u_routes = [
+			0 => "<div class='user_concluide'>Usuário adicionado com sucesso!</div>",
+			1 => "<div class='user_concluide'>Usuário não encontrado</div>",
+			2 => "<div class='user_concluide'></div>",
+		];
+
+		if (isset($u_routes[$u])) {
+			echo $u_routes[$u];
 		}
 	}
 }
