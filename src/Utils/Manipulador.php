@@ -7,7 +7,7 @@ function u(){
 		$u_routes = [
 			0 => "<div class='user_concluide'>Usuário adicionado com sucesso!</div>",
 			1 => "<div class='user_concluide'>Usuário não encontrado</div>",
-			2 => "<div class='user_concluide'></div>",
+			2 => "<div class='user_concluide'>E-mail enviado com sucesso!</div>",
 		];
 
 		if (isset($u_routes[$u])) {
