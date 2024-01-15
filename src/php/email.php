@@ -1,14 +1,38 @@
 <?php
+include 'src/conf/MySQL.php';
 
+//importa as bibliotecas
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
 require 'vendor/autoload.php';
 
-//$assunto = $_POST['assunto'];
-//$mensagem = $_POST['mensagem'];
-$id_uniq = substr(uniqid(),0, 8);
+$status = http_response_code(); //verifica o status da sessão atual
+$id_uniq = substr(uniqid(), 0, 8); //cria um id unico (Mudar)
 
+$user = mysqli_real_escape_string($link, $_POST['user']);
+$email = mysqli_real_escape_string($link, $_POST['email']);
+
+if ($status != 404) {
+    $sql = "SELECT * FROM usuarios WHERE nome_usuario = '$user'";
+    $result = $link->query($sql);
+
+    if ($result === false) {
+        // Tratar erros na execução da consulta
+        die("Erro na consulta: " . $link->error);
+    }
+
+    if ($result->num_rows > 0) {
+        enviarMensagem($id_uniq);
+        header("location: /?u=2"); //usuario encontrado com sucesso
+    } else {
+       header("location: /?u=1"); //usuario não encontrado no banco de dados
+    }
+} else {
+    die("404");
+}
+
+//função de envio de mensagens
 function enviarMensagem($id_uniq) {
     $corpoEmail = "
         <p>Código de acesso pessoal</p>
@@ -35,11 +59,8 @@ function enviarMensagem($id_uniq) {
         $mail->Body = $corpoEmail;
 
         $mail->send();
-        echo 'E-mail enviado com sucesso!';
     } catch (Exception $e) {
         echo "Erro ao enviar o e-mail: {$mail->ErrorInfo}";
     }
 }
-
-enviarMensagem($id_uniq);
 ?>
