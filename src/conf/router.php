@@ -14,12 +14,19 @@ class Router extends RouteSwitch{
             '?error=3',
             '?u=0',
             '?u=1',
-            '?u=2',
+        ];
+
+        $router_acess_uniq = [
+            'Acesso_Unico/',
+            'Acesso_Unico/?mail=200',
+            'Acesso_Unico/?mail=200-&di=NjU5ZjA5Zjc4MGFlNw=='
         ];
 
         if (in_array($route, $routes_login)) {
             $this->home();
-        } else {
+        }else if(in_array($route, $router_acess_uniq)){
+            $this->Acesso_Unico();
+        }else {
             $this->$route();
         }
     }
