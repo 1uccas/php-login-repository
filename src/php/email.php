@@ -23,8 +23,7 @@ if ($status != 404) {
     }
 
     if ($result->num_rows > 0) {
-        enviarMensagem($id_uniq, $user, $email);
-        header("location: /?u=2"); //usuario encontrado com sucesso
+        enviarMensagem($link, $id_uniq, $user, $email);
     } else {
        header("location: /?u=1"); //usuario não encontrado no banco de dados
     }
@@ -33,7 +32,7 @@ if ($status != 404) {
 }
 
 //função de envio de mensagens
-function enviarMensagem($id_uniq, $user, $email) {
+function enviarMensagem($link, $id_uniq, $user, $email) {
     $corpoEmail = "
         <center><h1>Código de acesso pessoal</h1></center>
 
@@ -67,5 +66,15 @@ function enviarMensagem($id_uniq, $user, $email) {
     } catch (Exception $e) {
         echo "Erro ao enviar o e-mail: {$mail->ErrorInfo}";
     }
+
+    //enviar codigo unico para a coluna do banco de dados correspondente ao usuario
+    $sql = "UPDATE usuarios SET cd_uniq = '$id_uniq' WHERE nome_usuario = '$user';";
+
+       if (mysqli_query($link, $sql)) {
+           header("location: Acesso_Unico/?mail=200"); //usuario encontrado com sucesso
+       } else {
+           echo "Erro: " . $sql . "<br>" . mysqli_errno($link);
+       }
+       mysqli_close($link);
 }
 ?>
