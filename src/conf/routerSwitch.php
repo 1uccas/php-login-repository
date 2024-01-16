@@ -14,7 +14,9 @@ abstract class RouteSwitch{
     protected function enviar_email(){
         require __DIR__. '/../php/email.php';
     }
-
+    protected function Acesso_Unico(){
+        require __DIR__. '/../page/acesso_unico.php';
+    }
     protected function cadastro(){
         require __DIR__ . '/../page/cadastro.php';
     }
