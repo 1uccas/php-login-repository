@@ -9,7 +9,6 @@ require 'vendor/autoload.php';
 
 $status = http_response_code(); //verifica o status da sessão atual
 $id_uniq = substr(uniqid(), 0, 8); //cria um id unico (Mudar)
-
 $user = mysqli_real_escape_string($link, $_POST['user']);
 $email = mysqli_real_escape_string($link, $_POST['email']);
 
@@ -23,7 +22,9 @@ if ($status != 404) {
     }
 
     if ($result->num_rows > 0) {
-        enviarMensagem($link, $id_uniq, $user, $email);
+        $row = $result->fetch_assoc(); //captação de dados para definidir id do banco de dados
+        $id = $row['id'];
+        enviarMensagem($link, $id_uniq, $user, $email, $id);
     } else {
        header("location: /?u=1"); //usuario não encontrado no banco de dados
     }
@@ -32,7 +33,7 @@ if ($status != 404) {
 }
 
 //função de envio de mensagens
-function enviarMensagem($link, $id_uniq, $user, $email) {
+function enviarMensagem($link, $id_uniq, $user, $email, $id) {
     $corpoEmail = "
         <center><h1>Código de acesso pessoal</h1></center>
 
@@ -69,9 +70,10 @@ function enviarMensagem($link, $id_uniq, $user, $email) {
 
     //enviar codigo unico para a coluna do banco de dados correspondente ao usuario
     $sql = "UPDATE usuarios SET cd_uniq = '$id_uniq' WHERE nome_usuario = '$user';";
+    $encrypt_id = base64_encode($id);
 
        if (mysqli_query($link, $sql)) {
-           header("location: Acesso_Unico/?mail=200"); //usuario encontrado com sucesso
+           header("location: Acesso_Unico/?mail=200-&?di=$encrypt_id"); //usuario encontrado com sucesso
        } else {
            echo "Erro: " . $sql . "<br>" . mysqli_errno($link);
        }
