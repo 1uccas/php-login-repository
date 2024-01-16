@@ -17,6 +17,9 @@ abstract class RouteSwitch{
     protected function Acesso_Unico(){
         require __DIR__. '/../page/acesso_unico.php';
     }
+    protected function validarToken(){
+        require __DIR__. '/../php/validarToken.php';
+    }
     protected function cadastro(){
         require __DIR__ . '/../page/cadastro.php';
     }
