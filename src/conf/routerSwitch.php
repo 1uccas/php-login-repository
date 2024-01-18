@@ -29,6 +29,9 @@ abstract class RouteSwitch{
     protected function phpLogin(){
         require __DIR__ . '/../php/autenticacao.php';
     }
+    protected function exit(){
+        require __DIR__. '/../php/exit.php';
+    }
     
     public function __call($name, $arguments){
         http_response_code(404);

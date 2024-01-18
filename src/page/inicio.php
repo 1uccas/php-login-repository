@@ -11,7 +11,8 @@ if (!isset($_SESSION['id'])) {
 	echo "<br>Hello World!";
 
 	echo "<br><br> <h1>Implementar sessões na página inicio!!!!!</h1>";
-
+	echo "<a href='exit'>Sair</a>";
 }
 
 ?>
+
