@@ -17,6 +17,7 @@ if ($result->num_rows > 0) {
 	$user = $row['nome_usuario'];
 	startSession($user);
     header("location: /inicio"); //usuario encontrado com sucesso
+    deleteCodigo($link, $id_uniq);
 } else {
 	die("Codigo invalido");
    //header("location: /?u=1"); //usuario não encontrado no banco de dados
@@ -24,4 +25,15 @@ if ($result->num_rows > 0) {
 
 mysqli_close($link);
 
+
+function deleteCodigo($link, $id){
+    $sql = "UPDATE usuarios SET cd_uniq = NULL WHERE cd_uniq = '$id';";
+    $result = $link->query($sql);
+
+    if ($result === false) {
+        die("Erro ao processar: " . $link->error);
+    }
+
+    mysqli_close($link);
+}
 ?>
