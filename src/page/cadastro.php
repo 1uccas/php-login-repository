@@ -24,6 +24,13 @@
 						  <span class="input-group-text" id="addon-wrapping"></span>
 						  <input type="text" class="form-control" id="username_cadastro" name="username_cadastro" placeholder="Username" aria-label="Username" aria-describedby="addon-wrapping" required>
 						</div>
+						<div class="div-label-email">
+							<label>Email</label>
+						</div>
+						<div class="input-group flex-nowrap m-2">
+						  <span class="input-group-text" id="addon-wrapping"></span>
+						  <input type="email" class="form-control" id="email_cadastro" name="email_cadastro" placeholder="E-mail" aria-label="email" aria-describedby="addon-wrapping" required>
+						</div>
 						<div class="div-label-password">
 							<label>Senha</label>
 						</div>

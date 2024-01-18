@@ -7,6 +7,7 @@ if (!isset($_POST['username_cadastro']) || !isset($_POST['password_cadastro'])) 
 }else{
    $user = mysqli_real_escape_string($link, $_POST['username_cadastro']); // Sanitizar entrada do usuário
    $password = mysqli_real_escape_string($link, $_POST['password_cadastro']); // Sanitizar entrada do usuário
+   $email = mysqli_real_escape_string($link, $_POST['email_cadastro']); // Sanitizar entrada do usuário
 }
 
 //chamada de usuarios do banco de dados
@@ -18,14 +19,14 @@ if ($result_sql_user->num_rows > 0) {
     header("location: /?error=2");
     die();
 } else { 
-   insertUser($link, $user, $password);
+   insertUser($link, $user, $password, $email);
 }
 
-function insertUser($link, $user, $password){
+function insertUser($link, $user, $password, $email){
    $id = uniqid();
    $pass = password_hash($password, PASSWORD_DEFAULT);
 
-   $sql = "INSERT INTO usuarios (id, nome_usuario, senha) VALUES ('$id', '$user', '$pass')";
+   $sql = "INSERT INTO usuarios (id, nome_usuario, senha, email) VALUES ('$id', '$user', '$pass', '$email')";
 
    if (mysqli_query($link, $sql)) {
        header("location: /?u=0");

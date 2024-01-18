@@ -14,7 +14,7 @@ body{
 	padding: 80px;
 }
 
-.div-label-user, .div-label-password, .div-label-again-password{
+.div-label-user, .div-label-email, .div-label-password, .div-label-again-password{
 	margin-left: 10px;
 	text-align: left;
 	color: white;
