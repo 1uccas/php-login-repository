@@ -5,6 +5,8 @@ function startSession($user){
 	if (session_start() !== PHP_SESSION_ACTIVE) {
 		//Se tiver ativa mas não tiver nenhuma sessão habilitada, inicia uma nova
 		if (!isset($_SESSION)) {
+			//header("location: /?error=3"); //CODIGO VIA URL INFORMANDO AO USUARIO PARA FAZER LOGIN
+			die("Sessão não ativa!"); 
 			session_start();	
 		}else{
 			$id_session = $_SESSION['id'] = session_id();
