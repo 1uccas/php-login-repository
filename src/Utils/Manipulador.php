@@ -23,6 +23,7 @@ function errors(){
 		$errors = [
 			1 => "<div class='error'>Usuário ou Senha Incorretos!</div>",
 			2 => "<div class='error'>Usuário já cadastrado</div>",
+			3 => "<div class='error'>Sua sessão expirou, faça login!</div>",
 		];
 
 		if (isset($errors[$error_1])) {
