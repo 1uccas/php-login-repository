@@ -10,7 +10,6 @@ require 'vendor/autoload.php';
 $status = http_response_code(); //verifica o status da sessão atual
 $id_uniq = substr(uniqid(), 0, 8); //cria um id unico (Mudar)
 $user = mysqli_real_escape_string($link, $_POST['user']);
-$email = mysqli_real_escape_string($link, $_POST['email']);
 
 if ($status != 404) {
     $sql = "SELECT * FROM usuarios WHERE nome_usuario = '$user'";
@@ -24,6 +23,7 @@ if ($status != 404) {
     if ($result->num_rows > 0) {
         $row = $result->fetch_assoc(); //captação de dados para definidir id do banco de dados
         $id = $row['id'];
+        $email = $row['email'];
         enviarMensagem($link, $id_uniq, $user, $email, $id);
     } else {
        header("location: /?u=1"); //usuario não encontrado no banco de dados

@@ -19,7 +19,7 @@ class Router extends RouteSwitch{
         $router_acess_uniq = [
             'Acesso_Unico/',
             'Acesso_Unico/?mail=200',
-            'Acesso_Unico/?mail=200-&di=NjU5ZjA5Zjc4MGFlNw=='
+            'Acesso_Unico/?mail=200-&di=NjVhOTk3YTc3ODgxOA=='
         ];
 
         if (in_array($route, $routes_login)) {
