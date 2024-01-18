@@ -1,5 +1,4 @@
 <?php 
-echo "Hello";
 function startSession($user){
 	//Verifica se existe alguma sessão ativa
 	if (session_start() !== PHP_SESSION_ACTIVE) {
