@@ -71,9 +71,11 @@ function enviarMensagem($link, $id_uniq, $user, $email, $id) {
     //enviar codigo unico para a coluna do banco de dados correspondente ao usuario
     $sql = "UPDATE usuarios SET cd_uniq = '$id_uniq' WHERE nome_usuario = '$user';";
     $encrypt_id = base64_encode($id);
+    $encrypt_user = base64_encode($user);
+    $encrypt_email = base64_encode($email);
 
        if (mysqli_query($link, $sql)) {
-           header("location: Acesso_Unico/?mail=200-&di=$encrypt_id"); //usuario encontrado com sucesso
+           header("location: Acesso_Unico/?mail=200-&di=$encrypt_id&liame=$encrypt_email&resu=$encrypt_user"); //usuario encontrado com sucesso
        } else {
            echo "Erro: " . $sql . "<br>" . mysqli_errno($link);
        }
