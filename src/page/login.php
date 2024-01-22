@@ -12,6 +12,10 @@ include 'src/Utils/Manipulador.php';
 	<title>Atomic · Login</title>
 </head>
 <body class="bg-dark">
+	<div class="buttons-mod">
+		<button id="button_white"><img src="../../public/assets/sol.png" alt="" id="sol"></button>
+		<button id="button_dark" style="display: none"><img src="../../public/assets/lua.png" alt="" id="lua"></button>
+	</div>
 	<main class="main-class-master">
 		<div class="box-class-container">
 			<div class="box-class">
@@ -50,4 +54,5 @@ include 'src/Utils/Manipulador.php';
 		</div>
 	</main>
 </body>
+<script type="text/javascript" src="../../src/Utils/mod_dark.js"></script>
 </html>

@@ -42,12 +42,11 @@ body{
 }
 
 .box-login{
-	margin-top: 25%;
+	margin-top: 20%;
 	border-radius: 5%;
 	background: linear-gradient(to right, #3a1357, #003366);
 	padding: 50px;
 }
-
 .div-label-user, .div-label-password{
 	margin-left: 10px;
 	text-align: left;
@@ -64,4 +63,20 @@ body{
 }
 .div-forgout-password a:hover, .div-novo-usuario a:hover{
 	color: white;
+}
+.buttons-mod{
+	margin-top: 10px;
+	margin-left: 95%;
+}
+
+#button_white,
+#button_dark {
+    border: none;
+    padding: 0;
+    background: none;
+    cursor: pointer;
+}
+#sol, #lua{
+	height: 30px;
+	width: 30px;
 }
