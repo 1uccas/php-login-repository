@@ -64,19 +64,3 @@ body{
 .div-forgout-password a:hover, .div-novo-usuario a:hover{
 	color: white;
 }
-.buttons-mod{
-	margin-top: 10px;
-	margin-left: 95%;
-}
-
-#button_white,
-#button_dark {
-    border: none;
-    padding: 0;
-    background: none;
-    cursor: pointer;
-}
-#sol, #lua{
-	height: 30px;
-	width: 30px;
-}

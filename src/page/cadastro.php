@@ -12,6 +12,7 @@
 	</link>
 </head>
 <body class="bg-dark">
+	<?php include_once 'src/Utils/mods.html' ?>
 	<main class="main-class-master">
 		<div class="box-class-container">
 			<div class="box-class">
@@ -54,5 +55,6 @@
 		</div>
 	</main>
 </body>
-<script type="text/javascript" src="../Utils/validation.js"></script>
+<script type="text/javascript" src="../../src/Utils/validation.js"></script>
+<script type="text/javascript" src="../../src/Utils/mod_dark.js"></script>
 </html>
