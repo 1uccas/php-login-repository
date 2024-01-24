@@ -78,7 +78,7 @@ function enviarMensagem($link, $id_uniq, $user, $email, $id) {
     $encrypt_email = base64_encode($email);
 
        if (mysqli_query($link, $sql)) {
-           header("location: Acesso_Unico/?mail=200-&di=$encrypt_id&liame=$encrypt_email&resu=$encrypt_user"); //usuario encontrado com sucesso
+           header("location: Acesso_Unico/?mail=200-&di=".$encrypt_id."&liame=".$encrypt_email."&resu=".$encrypt_user); //usuario encontrado com sucesso
        } else {
            echo "Erro: " . $sql . "<br>" . mysqli_errno($link);
        }
