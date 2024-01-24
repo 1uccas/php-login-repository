@@ -1,6 +1,9 @@
 <?php
-include_once 'src/conf/MySQL.php';
+require_once 'src/conf/MySQL.php';
 include 'Sessions.php';
+
+$mysql = new DatabaseConnection();
+$link = $mysql->getLink();
 
 // Variáveis do formulário - index.php
 $user = mysqli_real_escape_string($link, $_POST['input-user']);

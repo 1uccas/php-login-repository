@@ -1,5 +1,8 @@
 <?php
-include 'src/conf/MySQL.php';
+require_once 'src/conf/MySQL.php';
+
+$mysql = new DatabaseConnection();
+$link = $mysql->getLink();
 
 //importa as bibliotecas
 use PHPMailer\PHPMailer\PHPMailer;

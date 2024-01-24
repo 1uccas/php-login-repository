@@ -1,6 +1,9 @@
 <?php 
-include 'src/conf/MySQL.php';
+require_once 'src/conf/MySQL.php';
 include 'src/php/Sessions.php';
+
+$mysql = new DatabaseConnection();
+$link = $mysql->getLink();
 
 $id_uniq = $_POST['cd_uniq'];
 

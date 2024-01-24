@@ -1,5 +1,8 @@
 <?php
-include 'src/conf/MySQL.php';
+require_once 'src/conf/MySQL.php';
+
+$mysql = new DatabaseConnection();
+$link = $mysql->getLink();
 
 //Valida se o formulário contem alguma informação
 if (!isset($_POST['username_cadastro']) || !isset($_POST['password_cadastro'])) {
