@@ -1,8 +1,8 @@
-# Atomic 🎯
+# test-login 🎯
 
 ***
 
-# Atomic é um sistema de organização pessoal feito interamente em PHP **PURO**.
+# test-login é um sistema de login feito interamente em PHP **PURO** utilizando URL amigáveis.
 ### Incluindo:
 - 📌 Sistema de rotas amigável
 - 🔨 Envio de erros por URL, caso algum dado seja enviado com erros, ou a autenticação seja falha.
@@ -12,7 +12,7 @@
 
 ***
 
-# Atomic is a personal organization system entirely made in **PURE** PHP.
+# test-login is a login system made entirely in **PURE** PHP using a friendly URL.
 ### Including:
 - 📌 User-friendly routing system
 - 🔨 Error reporting via URL, in case any data is sent with errors, or authentication fails.
