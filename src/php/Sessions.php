@@ -6,7 +6,7 @@ function startSession($user){
 		if (!isset($_SESSION)) {
 			session_start();	
 		}else{
-			$id_session = $_SESSION['id'] = session_id();
+			$id_session = $_SESSION['id'] = session_create_id();
 			$name_session = $_SESSION['nome'] = $user;
 			$status_session = session_status();
 
