@@ -1,13 +1,15 @@
 # php-login-repository 🎯
 
-Este repositório contém um sistema de autenticação em PHP, desenvolvido para facilitar a implementação de login, cadastro, recuperação de senha e envio de e-mails de acesso único em projetos web.
+Este repositório contém um sistema de autenticação em PHP, desenvolvido com implementações de login, cadastro, recuperação de senha, sessões e envio de e-mails de acesso único em projetos web.
 
 ## Funcionalidades Principais
 
-- **Login Seguro**: Implementação robusta para autenticação de usuários.
+- **Login Seguro**: Implementação para autenticação de usuários.
 - **Cadastro de Usuários**: Facilita a inclusão de novos usuários no sistema.
 - **Recuperação de Senha**: Funcionalidade para redefinir a senha esquecida.
 - **Envio de E-mail de Acesso Único**: Permite o envio seguro de e-mails para acesso único.
+- **Criptografia de Dados**: Cada dado sensivel, como ID, E-mail ou senha, são criptografados via URL.
+- **Sessões**: Implementação de Sessões únicas para cada usuário.
 - **Modo Dark e Light**: Permite o usuário escolher tema escuro ou tema claro da aplicação.
 
 ## Como Usar
