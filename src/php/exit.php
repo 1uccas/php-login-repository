@@ -4,11 +4,12 @@ session_start();
 
 //print_r($url[1]);
 
-$id = $_SESSION['id'];
+$id = $_GET['di'];
+$idDecode = base64_decode($id);
 
-if (isset($id)) {
+if (isset($idDecode)) {
 	session_destroy();
-	unset($id);
+	unset($idDecode);
 
 	header("Location: /");
 } else {
