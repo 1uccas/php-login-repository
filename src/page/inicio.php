@@ -21,6 +21,6 @@ if (!isset($_SESSION['id'])) {
 </body>
 
 
-<p><a href='exit'>Sair</a></p>
+<p><a href='exit/di=<?php echo $idSession; ?>'>Sair</a></p>
 <script type="text/javascript" src="../../src/Utils/mod_dark.js"></script>
 
