@@ -9,12 +9,15 @@ $url = array_filter(explode('/', $url));
 
 $arquivo = 'src/page/'.$url[0].'.php';
 $arquivo_php = 'src/php/'.$url[0].'.php';
+$arquivo_Utils = 'src/Utils/'.$url[0].'.php';
 //var_dump("<br>".$arquivo);
 
 if (is_file($arquivo)) {
 	include $arquivo;
 }else if(is_file($arquivo_php)){
 	include $arquivo_php;
+}else if(is_file($arquivo_Utils)){
+	include $arquivo_Utils;
 }else{
 	include 'src/page/not-found.html';
 }
