@@ -1,5 +1,6 @@
 <?php 
 include 'src/Utils/mods.html';
+include 'src/Utils/randomEmojis.php';
 session_start();
 
 if (!isset($_SESSION['id'])) {
@@ -18,7 +19,7 @@ $idCrypt = base64_encode($idSession);
 <body class="bg-dark">
 	<main class="master">
 		<div class="div-initil">
-			<label>Olá, <strong><?php echo $nomeSession; ?></strong> 🐱‍🐉</label><br>
+			<label>Olá, <strong><?php echo $nomeSession; ?></strong> <?php echo randomEmojis(); ?></label><br>
 			<!--<label>ID - <strong><?php echo $idSession; ?></strong></label>-->
 			<p><a href='exit/di=<?php echo $idCrypt; ?>'>Sair</a></p>
 		</div>
