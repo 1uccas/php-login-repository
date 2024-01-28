@@ -1,6 +1,6 @@
 <?php
 include 'src/Utils/Manipulador.php';
-
+//print_r($url[1]);
 ?>
 <!DOCTYPE html>
 <html>
@@ -18,7 +18,7 @@ include 'src/Utils/Manipulador.php';
 			<div class="box-class">
 				<div class="box-login">
 					<?php u(); ?> <!--Chamada da função de novo usuario cadastrado -->
-					<form action="phpLogin" method="POST">
+					<form action="autenticacao" method="POST">
 						<div class="div-label-user">
 							<label>Usuário</label>
 						</div>
