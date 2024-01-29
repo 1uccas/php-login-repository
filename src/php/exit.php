@@ -2,9 +2,7 @@
 
 session_start();
 
-//print_r($url[1]);
-
-$id = $_GET['di'];
+$id = $url[1];
 $idDecode = base64_decode($id);
 
 if (isset($idDecode)) {
