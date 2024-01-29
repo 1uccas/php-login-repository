@@ -1,14 +1,16 @@
 <?php
 require_once 'src/conf/MySQL.php';
-
-$mysql = new DatabaseConnection();
-$link = $mysql->getLink();
+require 'vendor/autoload.php';
 
 //importa as bibliotecas
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-require 'vendor/autoload.php';
+$dotenv = Dotenv\Dotenv::createUnsafeImmutable(__DIR__. "\..\..");
+$dotenv->load();
+
+$mysql = new DatabaseConnection();
+$link = $mysql->getLink();
 
 $status = http_response_code(); //verifica o status da sessão atual
 $id_uniq = substr(uniqid(), 0, 8); //cria um id unico (Mudar)
@@ -29,7 +31,7 @@ if ($status != 404) {
         $email = $row['email'];
         enviarMensagem($link, $id_uniq, $user, $email, $id);
     } else {
-       header("location: /?u=1"); //usuario não encontrado no banco de dados
+       //header("location: /?u=1"); //usuario não encontrado no banco de dados
     }
 } else {
     die("404");
@@ -54,8 +56,8 @@ function enviarMensagem($link, $id_uniq, $user, $email, $id) {
         $mail->isSMTP();
         $mail->Host = 'smtp.gmail.com';
         $mail->SMTPAuth = true;
-        $mail->Username = 'me.mailphp@gmail.com';
-        $mail->Password = 'ctvkmcxgxujfnygp';
+        $mail->Username = $_ENV['USERNAME_EMAIL'];
+        $mail->Password = $_ENV['PASSWORD_EMAIL'];
         $mail->SMTPSecure = 'tls';
         $mail->Port = 587;
 
