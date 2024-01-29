@@ -5,7 +5,7 @@ class DatabaseConnection {
     const SERVIDOR = "localhost";
     const USUARIO = "root";
     const SENHA = "";
-    const BANCO = "atomic";
+    const BANCO = "php-login-repository-db";
 
     public function __construct() {
         $this->link = mysqli_connect(self::SERVIDOR, self::USUARIO, self::SENHA, self::BANCO);
