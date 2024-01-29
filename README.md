@@ -22,8 +22,6 @@ Este repositório contém um sistema de autenticação em PHP, desenvolvido com 
 2. Configuração do Banco de Dados:
 
 - Importe o banco de dados disponível abaixo `php-login-repository-db.sql`.
-- `Login: admin_admin` 
-- `Senha: admin_admin`
 
 3. Integração no Projeto:
 
