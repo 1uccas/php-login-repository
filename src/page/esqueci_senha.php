@@ -7,6 +7,9 @@ include 'src/Utils/mods.html';
 
 <body class="bg-dark">
       <form action="email" method="post" class="form">
+            <div class="h3_form">
+                  <h3>Estamos quase...</h3>
+            </div>
             <div class="input-group flex-nowrap w-25">
               <input type="text" class="form-control" id="username_cadastro" name="user" placeholder="Nome de Usuario" aria-label="Username" aria-describedby="addon-wrapping" required>
             </div>
