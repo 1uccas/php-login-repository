@@ -44,7 +44,7 @@
 						  <input type="password" class="form-control" id="password_again_cadastro" name="password_again_cadastro" placeholder="Confirm your password" aria-label="Username" aria-describedby="addon-wrapping" required>
 						</div>
 						<div class="div-input-button">
-							<button type="submit" id="btn_cadastro" class="btn btn-warning" name="btn_cadastro">Criar cadastro</button>
+							<button type="submit" id="btn_cadastro" class="btn btn-warning w-75" name="btn_cadastro">Cadastrar-se</button>
 						</div>
 					</form>
 				</div>

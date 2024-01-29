@@ -37,7 +37,7 @@ include 'src/Utils/Manipulador.php';
 							<p><a href="esqueci_senha" class="pe-auto">Esqueci a senha</a></p>
 						</div>
 						<div class="div-input-button">
-							<button type="submit" class="btn btn-warning">Acessar</button>
+							<button type="submit" class="btn btn-warning w-75">Acessar</button>
 						</div>
 					</form>
 					<div class="div-novo-usuario">
