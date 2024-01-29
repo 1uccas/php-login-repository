@@ -5,12 +5,15 @@
 	align-items: center;
 	justify-content: center;
 }
-.text_email{
+.text_email, .text_email_white_mod{
 	margin-bottom: 30px;
+}
+.text_email_white_mod{
+	color: white;
 }
 #btn_enviar{
 	margin-top: 15px;
 }
-.text_email p{
+.text_email,.text_email_white_mod p{
 	font-size: 20px;
 }
