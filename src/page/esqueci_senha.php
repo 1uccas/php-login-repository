@@ -13,7 +13,7 @@ include 'src/Utils/mods.html';
             <div class="input-group flex-nowrap w-25">
               <input type="text" class="form-control" id="username_cadastro" name="user" placeholder="Nome de Usuario" aria-label="Username" aria-describedby="addon-wrapping" required>
             </div>
-            <button type="submit" class="btn btn-success w-25" name="Enviar">Enviar</button>
+            <button type="submit" id="btn_enviar" class="btn btn-success w-25" name="Enviar">Enviar</button>
       </form>
 </body>
 <script type="text/javascript" src="../../src/Utils/mod_dark.js"></script>

@@ -7,13 +7,13 @@ $descrypt_email = base64_decode($email);
 <link rel="stylesheet" href="../../src/styles/acesso_unico.css">
 
 <body class="bg-dark">
-      <form action="../validarToken" method="post">
+      <form action="../validarToken" method="post" class="form">
             <div class="text_email">
                   <p>Enviamos um código de acesso único ao e-mail: <strong><?php echo $descrypt_email; ?></strong></p>
             </div>
             <div class="input-group flex-nowrap w-25">
               <input type="text" class="form-control" id="username_cadastro" name="cd_uniq" placeholder="Informe seu codigo de uso unico" aria-label="cd_uniq" aria-describedby="addon-wrapping" required>
             </div>
-            <button type="submit" class="btn btn-success w-25" name="Enviar">Enviar</button>
+            <button type="submit" id="btn_enviar" class="btn btn-success w-25" name="Enviar">Enviar</button>
       </form>
 </body>
