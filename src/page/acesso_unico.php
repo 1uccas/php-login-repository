@@ -11,8 +11,9 @@ $descrypt_email = base64_decode($email);
             <div class="text_email">
                   <p>Enviamos um código de acesso único ao e-mail: <strong><?php echo $descrypt_email; ?></strong></p>
             </div>
-            
-            <input type="text" name="cd_uniq" placeholder="Informe seu codigo de uso unico">
-            <input type="submit" name="Enviar">
+            <div class="input-group flex-nowrap w-25">
+              <input type="text" class="form-control" id="username_cadastro" name="cd_uniq" placeholder="Informe seu codigo de uso unico" aria-label="cd_uniq" aria-describedby="addon-wrapping" required>
+            </div>
+            <button type="submit" class="btn btn-success w-25" name="Enviar">Enviar</button>
       </form>
 </body>
