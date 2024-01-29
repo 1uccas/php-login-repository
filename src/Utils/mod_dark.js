@@ -8,6 +8,7 @@ const buttonDark = document.querySelector("#button_dark");
 const boxLogin = document.querySelector('.box-login');
 let test = document.querySelector('.div-initil');
 const h3_form = document.querySelector('.h3_form');
+const text_email = document.querySelector('.text_email');
 
 // função para aplicar o modo
 const applyMode = (mode) => {
@@ -18,6 +19,9 @@ const applyMode = (mode) => {
   }
   if (h3_form) {
     h3_form.className = mode === 'dark' ? "h3_form_white_mod" : "h3_form";
+  }
+  if (text_email) {
+    text_email.className = mode === 'dark' ? "text_email_white_mod" : "text_email";
   }
   buttonDark.style.display = mode === 'dark' ? "none" : "block";
   buttonWhite.style.display = mode === 'dark' ? "block" : "none";
