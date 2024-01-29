@@ -31,7 +31,7 @@ if ($status != 404) {
         $email = $row['email'];
         enviarMensagem($link, $id_uniq, $user, $email, $id);
     } else {
-       //header("location: /?u=1"); //usuario não encontrado no banco de dados
+       header("location: /?u=1"); //usuario não encontrado no banco de dados
     }
 } else {
     die("404");
