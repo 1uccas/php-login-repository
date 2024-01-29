@@ -4,10 +4,10 @@ Este repositório contém um sistema de autenticação em PHP, desenvolvido com 
 
 ## Funcionalidades Principais
 
-- **Login Seguro**: Implementação para autenticação de usuários.
+- **Login**: Implementação para autenticação de usuários.
 - **Cadastro de Usuários**: Facilita a inclusão de novos usuários no sistema.
-- **Recuperação de Senha**: Funcionalidade para redefinir a senha esquecida.
-- **Envio de E-mail de Acesso Único**: Permite o envio seguro de e-mails para acesso único.
+- **Acesso Único**: Funcionalidade para o usuário realizar login utilizando um código único.
+- **Envio de E-mail**: Permite o envio seguro de e-mails com códigos de acesso único.
 - **Criptografia de Dados**: Cada dado sensivel, como ID, E-mail ou senha, são criptografados via URL.
 - **Sessões**: Implementação de Sessões únicas para cada usuário.
 - **Modo Dark e Light**: Permite o usuário escolher tema escuro ou tema claro da aplicação.
