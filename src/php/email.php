@@ -60,7 +60,7 @@ function enviarMensagem($link, $id_uniq, $user, $email, $id) {
         $mail->Port = 587;
 
         // Configurações do e-mail
-        $mail->setFrom('me.mailphp@gmail.com', 'Atomic');
+        $mail->setFrom('me.mailphp@gmail.com', 'php-login-repository');
         $mail->addAddress($email, 'Destinatário');
         $mail->isHTML(true);
         $mail->Subject = "Acesso Pessoal";
