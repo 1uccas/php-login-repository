@@ -20,7 +20,6 @@ $idCrypt = base64_encode($idSession);
 	<main class="master">
 		<div class="div-initil">
 			<label>Olá, <strong><?php echo $nomeSession; ?></strong> <?php echo randomEmojis(); ?></label><br>
-			<!--<label>ID - <strong><?php echo $idSession; ?></strong></label>-->
 			<p><a href='exit/<?php echo $idCrypt; ?>'>Sair</a></p>
 		</div>
 	</main>
