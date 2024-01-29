@@ -15,7 +15,4 @@ button.addEventListener("click", (e)=>{
 		alert("As senhas não correspondem!");
 		e.preventDefault();
 	}
-
-	//console.log(`Username = ${username} - cont => ${username.length}\nPassword = ${password}\nConfirm Password = ${password_confirm}`);
-
 });
