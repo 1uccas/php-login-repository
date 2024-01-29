@@ -1,6 +1,5 @@
 <?php
 include 'src/Utils/Manipulador.php';
-//print_r($url[1]);
 ?>
 <!DOCTYPE html>
 <html>
@@ -9,7 +8,7 @@ include 'src/Utils/Manipulador.php';
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../../src/styles/index.css">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-	<title>Atomic · Login</title>
+	<title>PHP-login-repository · Login</title>
 </head>
 <body class="bg-dark">
 	<?php include_once 'src/Utils/mods.html' ?>
