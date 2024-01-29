@@ -21,7 +21,7 @@ Este repositório contém um sistema de autenticação em PHP, desenvolvido com 
 
 2. Configuração do Banco de Dados:
 
-- Importe o esquema do banco de dados disponível abaixo `php-login-repository.sql`.
+- Importe o banco de dados disponível abaixo `php-login-repository-db.sql`.
 - `Login: admin_admin` 
 - `Senha: admin_admin`
 
@@ -33,7 +33,16 @@ Este repositório contém um sistema de autenticação em PHP, desenvolvido com 
 4. Rode o projeto em sua máquina.
 
 - Inicie seu servidor. 
-- Acesse `localhost:8080` ou (caso estiver utilizando Laragon) `php-login-repository.test` 
+- Acesse `localhost:8080` ou (caso estiver utilizando Laragon) `php-login-repository.test`
+
+5. Primeiros passos.
+
+Entre com os dados abaixo:
+
+- `Login: admin_admin`
+- `Senha: admin_admin`
+
+OU crie seu cadastro.
 
 ## Contribuições
 
