@@ -8,6 +8,10 @@
 .h3_form{
 	margin-bottom: 30px;
 }
+.h3_form_white_mod{
+	margin-bottom: 30px;
+	color: white;
+}
 #btn_cadastro{
 	margin-top: 15px;
 }
