@@ -1,0 +1,13 @@
+.form{
+	height: 90vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+.text_email{
+	margin-bottom: 30px;
+}
+#btn_enviar{
+	margin-top: 15px;
+}
