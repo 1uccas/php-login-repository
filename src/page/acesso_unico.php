@@ -1,4 +1,5 @@
 <?php 
+include 'src/Utils/mods.html';
 $email = $_GET['liame'];
 $descrypt_email = base64_decode($email);
 
@@ -17,3 +18,4 @@ $descrypt_email = base64_decode($email);
             <button type="submit" id="btn_enviar" class="btn btn-success w-25" name="Enviar">Enviar</button>
       </form>
 </body>
+<script type="text/javascript" src="../../src/Utils/mod_dark.js"></script>
