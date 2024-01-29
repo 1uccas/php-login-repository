@@ -6,6 +6,6 @@
             <div class="input-group flex-nowrap w-25">
               <input type="text" class="form-control" id="username_cadastro" name="user" placeholder="Nome de Usuario" aria-label="Username" aria-describedby="addon-wrapping" required>
             </div>
-            <button type="submit" id="btn_cadastro" class="btn btn-success" name="Enviar">Enviar</button>
+            <button type="submit" id="btn_cadastro" class="btn btn-success w-25" name="Enviar">Enviar</button>
       </form>
 </body>
