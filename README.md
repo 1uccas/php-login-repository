@@ -37,12 +37,9 @@ Este repositório contém um sistema de autenticação em PHP, desenvolvido com 
 
 5. Primeiros passos.
 
-Entre com os dados abaixo:
-
+- Entre com os dados abaixo:
 - `Login: admin_admin`
 - `Senha: admin_admin`
-
-OU crie seu cadastro.
 
 ## Contribuições
 
